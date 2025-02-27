@@ -63,18 +63,35 @@
                 </section>
             </article>
             <article>
-                <form id="contactpageForm">
+                <form action="https://httpbin.org/post" method="POST" id="contactpageForm">
                     <fieldset>
                         <legend>Contact Me:</legend>
+
                         <form-field>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Example@email.com"><br><br>
+                            <label for="name">Name <span class="required">*</span>:</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <output class="error" id="name-error">Name error message.</output>
+                            <output class="info" id="name-info">Enter your full name.</output>
                         </form-field>
+                        
                         <form-field>
-                            <label for="message">Message:</label>
-                            <input id="message" name="message" placeholder="Text"><br><br>
+                            <label for="email">Email <span class="required">*</span>:</label>
+                            <input type="email" id="email" name="email" placeholder="Example@email.com" required>
+                            <output class="error" id="email-error">Email error message.</output>
+                            <output class="info" id="email-info">Enter your email address.</output>
                         </form-field>
-                        <button id="submitBtn" type="submit">Send</button>
+                        
+                        <form-field>
+                            <label for="comments">Comments <span class="required">*</span>:</label>
+                            <textarea id="comments" name="comments" placeholder="Message" required></textarea>
+                            <output class="error" id="comments-error">Comments error message.</output>
+                            <output class="info" id="comments-info">Send a message!</output>
+                        </form-field>
+                    
+                        <input type="hidden" name="possible_bot" value="true">
+                    
+                        <button type="submit">Submit</button>
+                        <p id="requiredMessage">* indicates required field</p>
                     </fieldset>
                 </form>
             </article>

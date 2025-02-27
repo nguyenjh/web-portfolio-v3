@@ -593,13 +593,47 @@ legend {
 
 #contactpageForm form-field {
     display: flex;
-    height: 25px;
-    gap: 10px;
+    flex-direction: column;
+    height: 100px;
     padding: 10px;
 }
 
-#email, #message {
+input, textarea {
     width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 15px;
+}
+
+#name, #email, #comments {
+    width: 100%;
+}
+
+.required {
+    color: var(--orange);
+}
+
+output {
+    font-size: 20px;
+    padding-top: 3px;
+}
+
+.error {
+    color: red;
+}
+
+.info {
+    color: gray;
+}
+
+#requiredMessage {
+    font-size: 20px;
 }
 
 footer#contactpageFooter {
