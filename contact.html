@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <header id="contactpageHeader">
         <h1><a href="index.html">Julie Nguyen | Web Portfolio</a></h1>
         <nav>
@@ -63,32 +64,36 @@
                 </section>
             </article>
             <article>
-                <form action="https://httpbin.org/post" method="POST" id="contactpageForm">
+                <form action="https://httpbin.org/post" method="POST" id="contactForm">
                     <fieldset>
                         <legend>Contact Me:</legend>
 
                         <form-field>
                             <label for="name">Name <span class="required">*</span>:</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" pattern="[A-Za-z]*" required>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            
+                            <output class="info" id="name-info">Enter your full name.</output><br>
                             <output class="error" id="name-error"></output>
-                            <output class="info" id="name-info">Enter your full name. Valid characters include A-z.</output>
                         </form-field>
                         
                         <form-field>
                             <label for="email">Email <span class="required">*</span>:</label>
                             <input type="email" id="email" name="email" placeholder="Example@email.com" required>
+                            
+                            <output class="info" id="email-info">Enter your email address.</output><br>
                             <output class="error" id="email-error"></output>
-                            <output class="info" id="email-info">Enter your email address.</output>
                         </form-field>
                         
                         <form-field>
                             <label for="comments">Comments <span class="required">*</span>:</label>
                             <textarea id="comments" name="comments" placeholder="Message" minlength="10" maxlength="300" required></textarea>
+                            
+                            <output class="info" id="comments-info">Send a message! Minimum number of characters: 10.</output><br>
                             <output class="error" id="comments-error"></output>
-                            <output class="info" id="comments-info">Send a message! Minimum number of characters: 10.</output>
                         </form-field>
                     
                         <input type="hidden" name="possible_bot" value="true">
+                        <input type="hidden" name="form-errors" id="form-errors" value="[]">
                     
                         <button type="submit">Submit</button>
                         <p id="requiredMessage">* indicates required field</p>

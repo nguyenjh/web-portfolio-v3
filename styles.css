@@ -618,6 +618,15 @@ input:valid, textarea:valid {
     border-width: 3px;
 }
 
+input.flash, textarea.flash {
+    animation: flash 0.3s alternate 2;
+}
+
+@keyframes flash {
+    from { background-color: #ffcccc; }
+    to { background-color: white; }
+}
+
 textarea {
     resize: vertical;
     min-height: 15px;
@@ -638,10 +647,25 @@ output {
 
 .error {
     color: red;
+    height: 14px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.error.hidden {
+    opacity: 0;
 }
 
 .info {
     color: gray;
+}
+
+.info.warning {
+    color: orange;
+}
+
+.info.error {
+    color: red;
 }
 
 #requiredMessage {
