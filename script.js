@@ -1,3 +1,7 @@
+// Add a class to <html> to indicate JS is enabled
+document.documentElement.classList.add("js-enabled");
+
+// Contact Form
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const nameInput = document.getElementById("name");
@@ -63,6 +67,33 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         if (form_errors.length > 0) {
             formErrorsField.value = JSON.stringify(form_errors);
+        }
+    });
+});
+
+// Toggle Theme
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme");
+
+    // Apply the saved theme
+    if (currentTheme === "dark") {
+        document.body.classList.add("light-theme");
+        themeToggleBtn.textContent = "☀︎";
+    } else {
+        themeToggleBtn.textContent = "⏾";
+    }
+
+    // Toggle theme on button click
+    themeToggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+
+        if (document.body.classList.contains("light-theme")) {
+            localStorage.setItem("theme", "dark");
+            themeToggleBtn.textContent = "☀︎";
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggleBtn.textContent = "⏾";
         }
     });
 });

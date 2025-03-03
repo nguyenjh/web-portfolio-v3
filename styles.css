@@ -123,8 +123,10 @@ button > a {
 }
 
 footer#homepageFooter {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    margin-left: -8px;
+    margin-bottom: -9px;
+    margin-top: 20px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -136,6 +138,7 @@ footer#homepageFooter {
 
 header#aboutpageHeader {
     position: relative;
+    margin-left: -8px;
 }
 
 header#aboutpageHeader li:last-child {
@@ -261,6 +264,8 @@ section#aboutpageSection td {
 
 footer#aboutpageFooter {
     position: relative;
+    margin-left: -8px;
+    margin-bottom: -9px;
     margin-top: 20px;
     width: 100%;
     text-align: center;
@@ -273,6 +278,7 @@ footer#aboutpageFooter {
 
 header#projectspageHeader {
     position: relative;
+    margin-left: -8px;
 }
 
 header#projectspageHeader li:last-child {
@@ -423,6 +429,7 @@ hr {
 
 footer#projectspageFooter {
     position: absolute;
+    margin-left: -8px;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -435,6 +442,7 @@ footer#projectspageFooter {
 
 header#workexppageHeader {
     position: relative;
+    margin-left: -8px;
 }
 
 header#workexppageHeader li:last-child {
@@ -474,6 +482,7 @@ section#workexppageSection {
 
 footer#workexppageFooter {
     position: absolute;
+    margin-left: -8px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -485,6 +494,7 @@ footer#workexppageFooter {
 
 header#resumepageHeader {
     position: relative;
+    margin-left: -8px;
 }
 
 header#resumepageHeader li:last-child {
@@ -493,6 +503,7 @@ header#resumepageHeader li:last-child {
 
 footer#resumepageFooter {
     position: absolute;
+    margin-left: -8px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
@@ -504,6 +515,7 @@ footer#resumepageFooter {
 
 header#contactpageHeader {
     position: relative;
+    margin-left: -8px;
 }
 
 header#contactpageHeader li:last-child {
@@ -665,11 +677,167 @@ output {
 
 footer#contactpageFooter {
     position: absolute;
+    margin-left: -8px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     font-size: 120%;
+}
+
+/* Light Theme */
+
+#theme-toggle {
+    display: none;
+}
+
+.js-enabled #theme-toggle {
+    display: block;
+    background: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.5);
+}
+
+.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #00b3ff;
+}
+
+.light-theme #backgroundImg {
+    content: url("./media/laptopLight.jpg");
+}
+
+.light-theme #projectspageSection {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
+}
+
+.light-theme aside {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
+}
+
+.light-theme #submitBtn {
+    background-color: black;
+    color: white;
+}
+
+.light-theme nav a:hover {
+    color: var(--accent-color);
+}
+
+.light-theme #homepageSection {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme p, h2, tr, address, h4, label {
+    color: var(--text-color);
+}
+
+.light-theme h2 > span {
+    color: var(--accent-color);
+}
+
+.light-theme button {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.light-theme ul > li {
+    color: var(--text-color);
+}
+
+.light-theme #aboutpageSection article {
+    background: rgba(201, 201, 201, 0.8);
+}
+
+.light-theme #aboutpageSection h3 {
+    color: var(--accent-color);
+}
+
+.light-theme #aboutpageSection h2 {
+    color: var(--accent-color);
+}
+
+.light-theme #aboutpageSection span {
+    color: var(--accent-color);
+}
+
+.light-theme #aboutpageSection li {
+    background-color: var(--accent-color);
+}
+
+.light-theme button:hover {
+    background-color: #0080ff;
+}
+
+.light-theme #aboutpageSection {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme #projects h2 {
+    color: var(--accent-color);
+}
+
+.light-theme #projects h3 {
+    color: var(--accent-color);
+}
+
+.light-theme #projectspageMain label {
+    color: var(--accent-color);
+}
+
+.light-theme .projectItem hgroup a {
+    color: var(--text-color);
+}
+
+.light-theme .projectItem hgroup a:hover {
+    color: var(--accent-color);
+}
+
+.light-theme footer p {
+    color: white;
+}
+
+.light-theme header a:hover {
+    color: var(--accent-color);
+}
+
+.light-theme #workexppageSection {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme #workexppageSection h2 {
+    color: var(--accent-color);
+}
+
+.light-theme #workexppageSection h3 {
+    color: var(--accent-color);
+}
+
+.light-theme #contactpageSection {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.light-theme #contactpageSection article {
+    background: rgba(201, 201, 201, 0.8);
+}
+
+.light-theme #contactpageSection h2 {
+    color: var(--accent-color);
+}
+
+.light-theme legend {
+    color: var(--accent-color);
+}
+
+.light-theme #contactpageSection span {
+    color: var(--accent-color);
 }
 
 /* Phone */
