@@ -820,6 +820,10 @@ footer#contactpageFooter {
     color: var(--accent-color);
 }
 
+.light-theme #resumepageSection {
+    background: rgba(255, 255, 255, 0.8);
+}
+
 .light-theme #contactpageSection {
     background: rgba(255, 255, 255, 0.8);
 }
